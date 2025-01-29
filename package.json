@@ -1,0 +1,34 @@
+{
+  "name": "personal_website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "sass src/static/scss:public/static/css --watch",
+    "build:sass": "sass src/static/scss:public/static/css",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "ELEVENTY_ENV=development eleventy",
+    "start": "npm run watch:eleventy & npm run watch:sass",
+    "build": "npm run build:eleventy & npm run build:sass",
+    "build:sass:prod": "sass src/static/scss:public/static/css --style compressed",
+    "build:eleventy:prod": "ELEVENTY_ENV=production eleventy",
+    "build:prod": "npm run build:eleventy:prod & npm run build:sass:prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahemmo/personal_website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mahemmo/personal_website/issues"
+  },
+  "homepage": "https://github.com/mahemmo/personal_website#readme",
+  "description": "",
+  "dependencies": {
+    "@11ty/eleventy": "3.0.0",
+    "sass": "1.83.4"
+  }
+}
